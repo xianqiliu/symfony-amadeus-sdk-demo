@@ -584,5 +584,8 @@
     },
     "webmozart/assert": {
         "version": "1.10.0"
+    },
+    "xianqiliu/amadeus-php": {
+        "version": "dev-master"
     }
 }

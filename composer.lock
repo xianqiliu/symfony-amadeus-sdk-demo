@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77310ddc396789225e70d0744237acf4",
+    "content-hash": "fc46961357d4b1995f9233b99b2b9d8a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -7659,6 +7659,62 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.10.0"
             },
             "time": "2021-03-09T10:59:23+00:00"
+        },
+        {
+            "name": "xianqiliu/amadeus-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xianqiliu/amadeus-php.git",
+                "reference": "7884437ae59725f6923a175cfa722c78e587ca75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xianqiliu/amadeus-php/zipball/7884437ae59725f6923a175cfa722c78e587ca75",
+                "reference": "7884437ae59725f6923a175cfa722c78e587ca75",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.8",
+                "phpstan/phpstan": "^1.5.2",
+                "phpunit/phpunit": "^9.5.19"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amadeus\\": "src/",
+                    "Amadeus\\Utils\\": "src/utils",
+                    "Amadeus\\Client\\": "src/client",
+                    "Amadeus\\Airport\\": "src/airport",
+                    "Amadeus\\Shopping\\": "src/shopping",
+                    "Amadeus\\Resources\\": "src/resources",
+                    "Amadeus\\Exceptions\\": "src/exceptions",
+                    "Amadeus\\ReferenceData\\": "src/referenceData",
+                    "Amadeus\\Shopping\\Availability\\": "src/shopping/availability"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "XianqiLIU",
+                    "email": "xianqi.liu@amadeus.com"
+                }
+            ],
+            "description": "PHP library for the Amadeus Self-Service travel APIs",
+            "support": {
+                "issues": "https://github.com/xianqiliu/amadeus-php/issues",
+                "source": "https://github.com/xianqiliu/amadeus-php/tree/master"
+            },
+            "time": "2022-05-23T13:37:50+00:00"
         }
     ],
     "packages-dev": [
@@ -9939,7 +9995,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "xianqiliu/amadeus-php": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
