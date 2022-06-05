@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/api", name="api_")
  */
-class DestinationController extends AmadeusController
+class DestinationsController extends AmadeusController
 {
 
     /**
