@@ -19,23 +19,20 @@ class DestinationsController extends AmadeusController
      */
     public function getDestinations(Request $request): Response
     {
-        $destinations = $this->amadeus->airport->directDestinations->get(
+        $destinations = $this->amadeus->getAirport()->getDirectDestinations()->get(
             array(
                 "departureAirportCode" => $request->get('departureAirportCode'),
                 "max" => $request->get('max')
             )
         );
 
-//        $data = [];
-//        foreach($destinations as $destination)
-//        {
-//            $data[] = $destination->toArray();
-//        }
+        // Custom Response
+//        $response = (object) [
+//            'meta' => $destinations[0]->getResponse()->getBodyAsJsonObject()->{'meta'},
+//            'data' => $destinations[0]->getResponse()->getBodyAsJsonObject()->{'data'}
+//        ];
 
-        $response = (object) [
-            'meta' => $destinations[0]->getResponse()->getBodyAsJsonObject()->{'meta'},
-            'data' => $destinations[0]->getResponse()->getBodyAsJsonObject()->{'data'}
-        ];
+        $response = $destinations[0]->getResponse()->getBodyAsJsonObject();
 
         return $this->json($response);
     }
